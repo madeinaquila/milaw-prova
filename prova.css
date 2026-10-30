@@ -311,3 +311,10 @@ a.member:hover .go { transform: rotate(45deg); }
 @media (hover: none) {
   .member .info { background: linear-gradient(0deg, var(--deep) 0%, rgba(36,89,85,.6) 60%, transparent 100%); padding-bottom: 8px; }
 }
+
+/* Principi: al passaggio la card si riempie di verde scuro */
+.value { transition: background-color .35s ease, color .35s ease, transform .35s ease; }
+.value p { transition: color .35s ease; }
+.value:hover, .value:focus-visible { background: var(--deep); color: #fff; transform: translateY(-4px); }
+.value:hover p, .value:focus-visible p { color: #d6ebe8; }
+@media (prefers-reduced-motion: reduce) { .value:hover { transform: none; } }
